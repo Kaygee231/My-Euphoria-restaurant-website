@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Order Pickup | Euphoria Phalaborwa</title><link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="site-header"><a class="logo" href="index.html">EUPHORIA <span>PHALABORWA</span></a><button class="menu-toggle" aria-label="Open menu">☰</button><nav class="nav"><a href="index.html">Home</a><a href="menu.html">Menu</a><a href="order.html" class="active">Order Pickup</a><a href="reservation.html">Reserve</a><a href="index.html#carwash">Car Wash</a><a class="nav-cta" href="order.html">Order Now</a></nav></header>
+<main>
+<section class="page-hero"><p class="eyebrow">PICKUP ONLY</p><h1>Order online.<br>Pay when you arrive.</h1><p>No deliveries and no online payment. Submit your order, then pay at the restaurant when you collect it.</p></section>
+<section class="section order-layout">
+<form id="orderForm" class="form-card">
+  <div class="notice"><b>Important:</b> This website does not take online payments. Your order is sent for pickup and you pay at the restaurant. For platters if you want half-platter please specify!
+  </div>
+  <label>Full name<input required name="name" placeholder="Your name"></label>
+  <label>Phone number<input required name="phone" type="tel" placeholder="e.g. 071 234 5678"></label>
+  <label>Pickup date<input required name="date" type="date"></label>
+  <label>Pickup time<input required name="time" type="time"></label>
+  <label>Order notes<textarea name="notes" rows="3" placeholder="Allergies, special requests, etc."></textarea></label>
+  <div class="order-items">
+    <h3>Select your Breakfast</h3>
+    <div class="order-row"><label>Sunrise Breakfast<input type="number" min="0" value="0" data-name="Sunrise Breakfast" data-price="85"></label><span>R85</span></div>
+    <div class="order-row"><label>Euphoria Breakfast<input type="number" min="0" value="0" data-name="Euphoria Breakfast" data-price="95"></label><span>R95</span></div>
+    <div class="order-row"><label>Basic Omelette Breakfast<input type="number" min="0" value="0" data-name="Basic Omelette Breakfast" data-price="69"></label><span>R69</span></div>
+    <div class="order-row"><label>Rich Omelette Breakfast<input type="number" min="0" value="0" data-name="Rich Omelette Breakfast" data-price="80"></label><span>R80</span></div>
+    <div class="order-row"><label>Health Breakfast<input type="number" min="0" value="0" data-name="Health Breakfast" data-price="85"></label><span>R85</span></div>
+    <div class="order-row"><label>Meaty Breakfast<input type="number" min="0" value="0" data-name="Meaty Breakfast" data-price="165"></label><span>R165</span></div>
+  </div>
+  <br>
+  <div class="order-items">
+    <h3>Select Your Toasted Sandwiches</h3>
+    <div class="order-row"><label>Cheese<input type="number" min="0" value="0" data-name="Cheese" data-price="55"></label><span>R55</span></div>
+    <div class="order-row"><label>Cheese & Tomato<input type="number" min="0" value="0" data-name="Cheese & Tomato" data-price="60"></label><span>R60</span></div>
+    <div class="order-row"><label>Ham, Cheese & Tomato<input type="number" min="0" value="0" data-name="Ham, Cheese & Tomato" data-price="75"></label><span>R75</span></div>
+    <div class="order-row"><label>Bacon, Egg & Cheese<input type="number" min="0" value="0" data-name="Bacon, Egg & Cheese" data-price="85"></label><span>R85</span></div>
+    <div class="order-row"><label>Bacon & Egg<input type="number" min="0" value="0" data-name="Bacon & Egg" data-price="75"></label><span>R75</span></div>
+    <div class="order-row"><label>Egg & Cheese<input type="number" min="0" value="0" data-name="Egg & Cheese" data-price="65"></label><span>R65</span></div>
+  </div>
+  <br>
+  <div class="order-items">
+    <h3>Select Your Starters</h3>
+    <div class="order-row"><label>Chicken Livers Peri-Peri<input type="number" min="0" value="0" data-name="Chicken Livers Peri-Peri" data-price="80"></label><span>R80</span></div>
+    <div class="order-row"><label>Cheesy Baked Dish<input type="number" min="0" value="0" data-name="Cheesy Baked Dish" data-price="85"></label><span>R85</span></div>
+    <div class="order-row"><label>Crumbled Mushrooms<input type="number" min="0" value="0" data-name="Crumbled Mushrooms" data-price="65"></label><span>R65</span></div>
+    <div class="order-row"><label>Calamari Strips<input type="number" min="0" value="0" data-name="Calamari Strips" data-price="75"></label><span>R75</span></div>
+    <div class="order-row"><label>Chicken Strips (150g)<input type="number" min="0" value="0" data-name="Chicken Strips (150g)" data-price="80"></label><span>R80</span></div>
+    <div class="order-row"><label>Spring Rolls Meal<input type="number" min="0" value="0" data-name="Spring Rolls Meal" data-price="155"></label><span>R155</span></div>
+  </div>
+  <br>
+  <div class="order-items">
+    <h3>Select Your Platers</h3>
+    <div class="order-row"><label>Euphoria Meaty Platter<input type="number" min="0" value="0" data-name="Euphoria Meaty Platter" data-price="950"></label><span>R950</span></div>
+    <div class="order-row"><label>Meaty Platter<input type="number" min="0" value="0" data-name="Meaty Platter" data-price="850"></label><span>R850</span></div>
+    <div class="order-row"><label>Sandwich Platter<input type="number" min="0" value="0" data-name="Sandwich Platter" data-price="690"></label><span>R690</span></div>
+    <div class="order-row"><label>Rich Golden Platter<input type="number" min="0" value="0" data-name="Rich Golden Platter" data-price="1440"></label><span>R1440</span></div>
+    <div class="order-row"><label>Sea Food Platter<input type="number" min="0" value="0" data-name="Sea Food Platter" data-price="1068"></label><span>R1068</span></div>
+  </div>
+  <br>
+  <div class="order-items">
+    <h3>Select Discount Deal</h3>
+    <div class="order-row"><label>2x Classic Burgers (Only on Tuesdays)<input type="number" min="0" value="0" data-name="2x Classic Burgers (Only on Tuesdays)" data-price="80"></label><span>R80</span></div>
+    <div class="order-row"><label>2x Crumbled Burgers (Only on Tuesdays)<input type="number" min="0" value="0" data-name="2x Crumbled Burgers (Only on Tuesdays)" data-price="140"></label><span>R140</span></div>
+    <div class="order-row"><label>Full Chicken Meal (Only on Thurdays)<input type="number" min="0" value="0" data-name="Full Chicken Meal (Only Thursdays)" data-price="690"></label><span>R690</span></div>
+    <div class="order-row"><label>Loaded Fries (Only on Sundays)<input type="number" min="0" value="0" data-name="Loaded Fries (Only on Sundays)" data-price="140"></label><span>R140</span></div>
+  </div>
+  <div class="total">Estimated total <strong id="orderTotal">R0</strong></div>
+  <button class="btn btn-primary full" type="submit">Submit Pickup Order</button>
+  <p id="orderMessage" class="form-message"></p>
+</form>
+<aside class="side-info"><h2>Pickup Information</h2><p>Orders are prepared for collection at the restaurant.</p><ul><li>✓ No delivery</li><li>✓ No online payment</li><li>✓ Pay at the restaurant</li><li>✓ Bring your order confirmation</li></ul><a href="menu.html" class="text-link">View full menu →</a></aside>
+</section>
+</main>
+<footer class="footer"><div><a class="logo" href="index.html">EUPPHORIA <span>PHALABORWA</span></a><p>Restaurant • Bar • Car Wash</p></div><div><p>Pickup only • No deliveries • Pay at restaurant</p><p>© <span id="year"></span> Euphoria Phalaborwa</p></div></footer>
+<script src="script.js"></script></body></html>

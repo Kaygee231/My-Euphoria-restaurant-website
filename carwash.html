@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Euphoria Car Wash</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f7fa;
+            color: #222;
+            line-height: 1.6;
+        }
+
+        /* HEADER */
+        header {
+            background: #111827;
+            color: white;
+            padding: 18px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .logo-icon {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            background: #0ea5e9;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 22px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+            font-weight: 500;
+        }
+
+        nav a:hover {
+            color: #38bdf8;
+        }
+
+        /* HERO */
+        .hero {
+            min-height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 60px 20px;
+            background: linear-gradient(135deg, #0f172a, #0369a1);
+            color: white;
+        }
+
+        .hero-content {
+            max-width: 750px;
+        }
+
+        .hero h1 {
+            font-size: 52px;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            font-size: 21px;
+            margin-bottom: 25px;
+        }
+
+        .slogan {
+            font-size: 28px;
+            font-weight: bold;
+            color: #7dd3fc;
+            margin-bottom: 25px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 13px 25px;
+            background: #0ea5e9;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+        }
+
+        .btn:hover {
+            background: #0284c7;
+        }
+
+        /* GENERAL SECTIONS */
+        section {
+            padding: 65px 8%;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 32px;
+            margin-bottom: 40px;
+            color: #0f172a;
+        }
+
+        /* HOURS */
+        .hours {
+            background: white;
+            text-align: center;
+        }
+
+        .hours-box {
+            max-width: 500px;
+            margin: auto;
+            background: #f8fafc;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        }
+
+        .hours-box p {
+            font-size: 18px;
+            margin: 8px;
+        }
+
+        /* ABOUT */
+        .about {
+            background: #e0f2fe;
+            text-align: center;
+        }
+
+        .about-content {
+            max-width: 800px;
+            margin: auto;
+            font-size: 18px;
+        }
+
+        /* PRICES */
+        .price-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 20px;
+        }
+
+        .price-card {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        }
+
+        .price-card h3 {
+            color: #0369a1;
+            margin-bottom: 15px;
+        }
+
+        .price {
+            font-size: 28px;
+            font-weight: bold;
+            color: #111827;
+            margin: 15px 0;
+        }
+
+        /* SERVICES */
+        .services {
+            background: #f8fafc;
+        }
+
+        .service-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+        }
+
+        .service-card {
+            background: white;
+            padding: 25px;
+            text-align: center;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.07);
+        }
+
+        .service-card .icon {
+            font-size: 40px;
+            margin-bottom: 10px;
+        }
+
+        .service-card h3 {
+            color: #0369a1;
+            margin-bottom: 8px;
+        }
+
+        /* WHY CHOOSE US */
+        .why-us {
+            background: #0f172a;
+            color: white;
+        }
+
+        .why-us .section-title {
+            color: white;
+        }
+
+        .why-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            text-align: center;
+        }
+
+        .why-card {
+            padding: 20px;
+        }
+
+        .why-card h3 {
+            color: #7dd3fc;
+            margin-bottom: 8px;
+        }
+
+        /* TERMS */
+        .terms {
+            background: white;
+        }
+
+        .terms-content {
+            max-width: 850px;
+            margin: auto;
+        }
+
+        .terms-content h3 {
+            margin-top: 20px;
+            color: #0369a1;
+        }
+
+        .terms-content ul {
+            margin: 10px 0 0 25px;
+        }
+
+        /* SLOGAN */
+        .final-slogan {
+            background: #0284c7;
+            color: white;
+            text-align: center;
+        }
+
+        .final-slogan h2 {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        /* FOOTER */
+        footer {
+            background: #020617;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        /* MOBILE */
+        @media (max-width: 768px) {
+
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav a {
+                margin: 0 7px;
+                font-size: 14px;
+            }
+
+            .hero h1 {
+                font-size: 38px;
+            }
+
+            .hero p {
+                font-size: 18px;
+            }
+
+            .slogan {
+                font-size: 22px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER / LOGO -->
+    <header>
+        <div class="logo">
+            <img src="Res logo.png" alt="Company Name Logo" class="logo-img">
+            Car Wash
+        </div>
+
+        <nav>
+            <a href="index.html" class="active">Home</a>
+            <a href="#about">About</a>
+            <a href="#prices">Prices</a>
+            <a href="#services">Services</a>
+            <a href="#terms">Terms</a>
+            
+        </nav>
+    </header>
+
+
+    <!-- HERO / SLOGAN -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="slogan">✨ FAST. FRESH. SPOTLESS ✨</div>
+
+            <h1>Restaurant/Bar/Carwash</h1>
+
+            <p>
+                Professional car cleaning and detailing services
+                that leave your vehicle looking fresh, clean and shining so you can drive with pride.
+            </p>
+
+            <a href="#prices" class="btn">View Our Prices</a>
+        </div>
+    </section>
+
+
+    <!-- OPENING HOURS -->
+    <section class="hours">
+        <h2 class="section-title">Opening Hours</h2>
+
+        <div class="hours-box">
+            <p><strong>Monday - Saturday:</strong> 09:00 - 21:00</p>
+            <p><strong>Sunday:</strong> 09:00 - 14:00</p>
+            <p><strong>Public Holidays:</strong> 09:00 - 14:00</p>
+        </div>
+    </section>
+
+
+    <!-- ABOUT US -->
+    <section class="about" id="about">
+        <h2 class="section-title">About Us</h2>
+
+        <div class="about-content">
+            <p>
+                We are a Restaurant, a Club, and a Car Wash
+                All under one roof, making your experience the best.
+                At Euphoria Car Wash, we believe every vehicle deserves
+                to look its best. We provide affordable and reliable car
+                washing and cleaning services using quality products and
+                attention to detail. <br>Great Food. Great Vibes. Spotless Rides.
+            </p>
+
+            <br>
+
+            <p>
+                Whether you need a quick wash, a full valet or a deeper
+                clean underneath your vehicle, our goal is simple:
+                <strong>to give you a cleaner car and a better driving experience.</strong>
+            </p>
+        </div>
+    </section>
+
+
+    <!-- PRICE LIST -->
+    <section id="prices">
+        <h2 class="section-title">Car Wash Price List</h2>
+
+        <div class="price-container">
+
+            <div class="price-card">
+                <h3>Small Car</h3>
+                <p>Hatchbacks & Small Sedans</p>
+                <div class="price">R100</div>
+                <p>Exterior + Interior Clean</p>
+            </div>
+
+            <div class="price-card">
+                <h3>Medium Car</h3>
+                <p>Sedans, Small SUVs & Single CAB</p>
+                <div class="price">R120</div>
+                <p>Exterior + Interior Clean</p>
+            </div>
+
+            <div class="price-card">
+                <h3>Large Car</h3>
+                <p>SUVs & Double CAB</p>
+                <div class="price">R130</div>
+                <p>Exterior + Interior Clean</p>
+            </div>
+
+            <div class="price-card">
+                <h3>Extra Large</h3>
+                <p>Large SUVs & Bus(V Class)</p>
+                <div class="price">R150</div>
+                <p>Exterior + Interior Clean</p>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- OTHER SERVICES -->
+    <section class="services" id="services">
+        <h2 class="section-title">Other Services</h2>
+
+        <div class="service-container">
+
+            <div class="service-card">
+                <div class="icon">✨</div>
+                <h3>Buff & Shine</h3>
+                <p>
+                    Give your vehicle's paintwork a polished,
+                    glossy and refreshed appearance.
+                </p>
+            </div>
+
+            <div class="service-card">
+                <div class="icon">🚘</div>
+                <h3>Valet Service</h3>
+                <p>
+                    A detailed interior and exterior cleaning
+                    for a complete vehicle refresh.
+                </p>
+            </div>
+
+            <div class="service-card">
+                <div class="icon">🧼</div>
+                <h3>Carpet Washing</h3>
+                <p>
+                    Deep cleaning of vehicle carpets and floor
+                    mats to remove dirt and stains.
+                </p>
+            </div>
+
+            <div class="service-card">
+                <div class="icon">🚗</div>
+                <h3>Cheesy Washing</h3>
+                <p>
+                    Thorough cleaning underneath your vehicle
+                    to remove dirt and build-up.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- WHY CHOOSE US -->
+    <section class="why-us">
+        <h2 class="section-title">Why Choose Us?</h2>
+
+        <div class="why-container">
+
+            <div class="why-card">
+                <h3>Quality Cleaning</h3>
+                <p>
+                    We pay attention to the details that make
+                    your vehicle look its best.
+                </p>
+            </div>
+
+            <div class="why-card">
+                <h3>Affordable Prices</h3>
+                <p>
+                    Professional car care without breaking
+                    your budget.
+                </p>
+            </div>
+
+            <div class="why-card">
+                <h3>Friendly Service</h3>
+                <p>
+                    We treat every customer and vehicle with
+                    care and respect.
+                </p>
+            </div>
+
+            <div class="why-card">
+                <h3>Convenient</h3>
+                <p>
+                    Quick and convenient services designed
+                    around your needs.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- TERMS AND CONDITIONS -->
+    <section class="terms" id="terms">
+        <h2 class="section-title">Terms & Conditions</h2>
+
+        <div class="terms-content">
+
+            <h3>1. Vehicle Condition</h3>
+            <p>
+                Customers must remove valuable and personal belongings
+                from their vehicles before cleaning.
+            </p>
+
+            <h3>2. Existing Damage</h3>
+            <p>
+                Customers should inform staff of any pre-existing scratches or damages
+                before the vehicle is washed as they are not our responsibility. We are not 
+                responsible for mechanic or electrical faults.
+            </p>
+
+            <h3>3. Pricing</h3>
+            <p>
+                Prices may vary depending on the size and condition
+                of the vehicle and the services requested. Extra charges
+                may apply for heavily soiled vehicles(mud, sand, pet hair, stains, etc)
+            </p>
+
+            <h3>4. Additional Services</h3>
+            <p>
+                Buffing, valet services, carpet washing and under-car
+                cleaning may be charged separately.
+            </p>
+
+            <h3>5. Personal Belongings</h3>
+            <p>
+                Please remove all valuable items from your vehicle.
+                Euphoria Car Wash is not responsible for personal
+                belongings left inside the vehicle.
+            </p>
+
+            <h3>6. Service Time</h3>
+            <p>
+                Service times may vary depending on vehicle size,
+                condition and the number of customers waiting. vehicles
+                are washed at owner's risk.
+            </p>
+
+            <h3>7. Agreement</h3>
+            <p>
+                By using our services, you agree to these terms.
+            </p>
+
+        </div>
+    </section>
+
+
+    <!-- FINAL SLOGAN -->
+    <section class="final-slogan">
+        <h2>Drive clean. Drive fresh. Drive with confidence</h2>
+        <p>
+            Thank You for choosing EUPHORIA. We treat your car like our own!
+        </p>
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2026 Euphoria Car Wash. All Rights Reserved.</p>
+        <p>Professional • Affordable • Reliable</p>
+    </footer>
+
+</body>
+</html>

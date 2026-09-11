@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reservations | Euphoria Phalaborwa</title><link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="site-header"><a class="logo" href="index.html">EUPHORIA <span>PHALABORWA</span></a><button class="menu-toggle" aria-label="Open menu">☰</button><nav class="nav"><a href="index.html">Home</a><a href="menu.html">Menu</a><a href="order.html">Order Pickup</a><a href="reservation.html" class="active">Reserve</a><a href="index.html#carwash">Car Wash</a><a class="nav-cta" href="order.html">Order Now</a></nav></header>
+<main>
+<section class="page-hero"><p class="eyebrow">BOOK YOUR TABLE</p><h1>Make a reservation.</h1><p>Tell us when you're coming and we'll have your table ready.</p></section>
+<section class="section reservation-grid">
+<form id="reservationForm" class="form-card">
+<label>Full name<input required name="name" placeholder="Your name"></label>
+<label>Phone number<input required name="phone" type="tel" placeholder="e.g. 071 234 5678"></label>
+<label>Email<input name="email" type="email" placeholder="you@example.com"></label>
+<div class="two-col"><label>Date<input required name="date" type="date"></label><label>Time<input required name="time" type="time"></label></div>
+<div class="two-col"><label>Guests<select required name="guests"><option value="">Select</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8+</option></select></label><label>Occasion<select name="occasion"><option>None</option><option>Birthday</option><option>Anniversary</option><option>Business</option><option>Other</option></select></label></div>
+<label>Special requests<textarea name="requests" rows="4" placeholder="High chair, seating preference, celebration details..."></textarea></label>
+<button class="btn btn-primary full" type="submit">Request Reservation</button><p id="reservationMessage" class="form-message"></p>
+</form>
+<aside class="side-info"><h2>Restaurant & Bar</h2><p>Come for the food, stay for the atmosphere.</p><div class="hours"><p><b>Mon–Thu</b><span>07:00–22:00</span></p><p><b>Fri–Sat</b><span>07:00–23:00</span></p><p><b>Sunday</b><span>08:00–21:00</span></p></div><hr><h2 id="carwash">Car Wash</h2><p>Ask at reception about adding a car wash while you dine.</p><a href="index.html#carwash" class="text-link">View car wash services →</a></aside>
+</section>
+</main>
+<footer class="footer"><div><a class="logo" href="index.html">EUPHORIA <span>PHALABORWA</span></a><p>Restaurant • Bar • Car Wash</p></div><div><p>Pickup only • No deliveries • Pay at restaurant</p><p>© <span id="year"></span> Euphoria Phalaborwa</p></div></footer>
+<script src="script.js"></script></body></html>
