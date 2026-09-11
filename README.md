@@ -1,4 +1,4 @@
-# Urban Flame — Restaurant, Bar & Car Wash Website
+# Euphoria — Restaurant, Bar & Car Wash Website
 
 A responsive multi-page starter website with:
 
@@ -24,6 +24,7 @@ A responsive multi-page starter website with:
 - `menu.html`
 - `order.html`
 - `reservation.html`
+- `carwash.html`
 - `styles.css`
 - `script.js`
 
